@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/m1-d6/style.css">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Green Grocery Shop</h1>
+<table>
+    <tr>
+        <td>Product</td>
+        <td>Image</td>
+        <td>Description</td>
+        <td>Price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="https://www.amazon.co.uk/Juvale-Set-Fake-Fruit-Apples/dp/B071QXGC9M/ref=sr_1_5?dchild=1&keywords=apple+fruit&qid=1612792420&sr=8-5">Apple</a></td>
+        <td><img src="/m1-d6/imgs/apples.jpg" alt=""></td>
+        <td>Apple, fruit of the domesticated tree Malus domestica (family Rosaceae), one of the most widely cultivated tree fruits. The apple is a pome (fleshy) fruit, in which the ripened ovary and surrounding tissue both become fleshy and edible. The apple flower of most varieties requires cross-pollination for fertilization. When harvested, apples are usually roundish, 5–10 cm (2–4 inches) in diameter, and some shade of red, green, or yellow in colour; they vary in size, shape, and acidity depending on the variety.</td>
+        <td>£8.49</td>
+    </tr>
+     <tr>
+        <td><a target="_blank" href="https://www.amazon.co.uk/Fresh-Naturally-Grown-Alphonso-Mango/dp/B07TXQZRJ4/ref=sr_1_35?dchild=1&keywords=mango+fruit&qid=1612792513&sr=8-35">Mango</a></td> 
+        <td><img src="/m1-d6/imgs/mango.jpg" alt=""></td>
+        <td>A mango is a stone fruit produced from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit. Most of these species are found in nature as wild mangoes. The genus belongs to the cashew family Anacardiaceae.</td>
+        <td>£5.99</td>
+    </tr>
+     <tr>
+        <td><a target="_blank" href="https://www.amazon.co.uk/Conference-Self-Fertile-Heavy-Cropper-Ready/dp/B013G9QSDY/ref=sr_1_10?dchild=1&keywords=pear+fruit&qid=1612792559&sr=8-10">Pear</a></td> 
+        <td><img src="/m1-d6/imgs/pear.jpg" alt=""></td>
+        <td>Pears are fruits produced and consumed around the world, growing on a tree and harvested in late Summer into October. The pear tree and shrub are a species of genus Pyrus, in the family Rosaceae, bearing the pomaceous fruit of the same name. Several species of pears are valued for their edible fruit and juices, while others are cultivated as trees.</td>
+        <td>£19.99</td>
+    </tr>
+     <tr>
+        <td><a target="_blank" href="https://www.amazon.co.uk/Orange-Fruit-Basket-delivery-Personal/dp/B07JFN156Q/ref=sr_1_5?dchild=1&keywords=orange+fruit&qid=1612792675&sr=8-5">Orange</a></td> 
+        <td><img src="/m1-d6/imgs/orange.jpg" alt=""></td>
+        <td>The orange is the fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus, which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony); varieties of sweet orange arise through mutations.</td>
+        <td>£20.00</td>
+    </tr> 
+     <tr>
+        <td><a target="_blank" href="https://www.amazon.co.uk/Strawberry-Cambridge-Favourite-Fruit-Plants/dp/B00HS3TKKI/ref=sr_1_12?dchild=1&keywords=Strawberry+fruit&qid=1612792710&sr=8-12">Strawberry</a></td> 
+        <td><img src="/m1-d6/imgs/strawberries.jpg" alt=""></td>
+        <td>The garden strawberry (or simply strawberry; Fragaria × ananassa)[1] is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide for their fruit. The fruit is widely appreciated for its characteristic aroma, bright red color, juicy texture, and sweetness. It is consumed in large quantities, either fresh or in such prepared foods as jam, juice, pies, ice cream, milkshakes, and chocolates. Artificial strawberry flavorings and aromas are also widely used in products such as candy, soap, lip gloss, perfume, and many others</td>
+        <td>£12.99</td>
+    </tr>     
+</table>
+
+<br>
+<br>
+
+<div id="footer">
+<h2>Green Grocery Shop</h2>
+<h3>Contact us:</h3>
+<div>
+<p>Address: 26 Great Queen Street, London WC2B 5BB</p> 
+</div>
+<form>
+<textarea placeholder="Send us a message..." cols="30" rows="10"></textarea>
+</form>
+<button type="submit">Submit</button>
+</div>
+ 
+
+<script>
+    function selectFirstHeading(){ 
+
+        let firstHeading = document.querySelector('h1')
+        console.log(firstHeading)
+
+        firstHeading.innerText= "Some Virtual Shop"
+       
+    }
+
+
+    function changeBackground() {
+        
+        let newBackground = document.querySelector('body')
+        console.log(newBackground)
+
+        newBackground.style.backgroundColor = 'red'
+    }
+
+
+    function changeFooter(){
+
+        let newAddress = document.querySelector('p')
+        console.log(newAddress)
+
+        newAddress.innerText="this is a fake address: blah blah Street, SS123"
+    }
+
+
+</script>
+</body>
+</html>
+
+
+
+
+<!-- TODO LIST
+
+EX10.: Write a function to add a CSS class to every Amazon link
+
+EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
+
+EX12: Write a function to color the price of every product in a different one every time -->
