@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+</head>
+
+  <body>
+    <header>
+      <h1>This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </header>
+
+    <main>
+      <hr />
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a href="strive.school">This link goes to Strive School</a>
+
+      <div>
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="input-field"
+          placeholder="input field for the exercise"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p>And this text is just for the exercise too!</p>
+    </footer>
+
+<script>
+
+ /* EXERCISE 1
+      Write a function for changing the title of the document in something else.
+      */
+
+      function changeTitle(newTitle){
+          const newTitleHeader = document.querySelector('title')
+          newTitleHeader.innerText = ("This is a new title, don't be dismayed :-)")
+          console.log(newTitleHeader)
+      }
+
+      /* EXERCISE 2
+      Write a function for changing the class of the title of the page in "myHeading".
+      */
+
+      function addClassToTitle(){
+          const changeClass = document.querySelector('h1')
+          changeClass.classList.add('myHeading') 
+
+      }
+
+      /* EXERCISE 3
+      Write a function for changing the text of only the p which are children of a div.
+      */
+
+      function changePcontent(){
+        const newPcontent = document.querySelector('div', 'p')
+        newPcontent.innerText = ('You have been officially replaced by something else :-)')
+
+      }
+
+      /* EXERCISE 4
+      Write a function for changing the destination of every link to https://www.google.com
+      */
+
+      function changeUrls() {
+          const newDestination = document.location
+          document.location = 'https://www.google.com'
+          console.log(document.location)
+
+      }
+
+       /* EXERCISE 5
+       Write a function for adding a new item in the second list.
+       */
+
+      function addToTheSecond(content){
+        const newLine = document.querySelector('#secondList')
+
+
+      }
+
+      /* EXERCISE 6
+      Write a function for adding a second paragraph to the div.
+      */
+
+      function addParagraph(content){
+         const newPara = document.createElement('p')
+            newPara.innerText = ("This is a pseudo paragraph, I am a ghost")
+                let currentPara = document.querySelector('div','p')
+            
+     
+
+      }
+
+      /* EXERCISE 7
+      Write a function for making the first UL disappear.
+      */
+
+      function firstUlDisappear() {
+
+      }
+
+      /* EXERCISE 8
+      Write a function for making the background of every UL green.
+      */
+
+      function paintItGreen(){
+
+      }
+
+      /* EXERCISE 9
+      Make the heading of the page change color every time the user clicks on it.
+      */
+
+      function makeItClickable(){
+
+      }
+
+      /* EXERCISE 10
+      Change the footer text with something else when the user clicks on it.
+      */
+
+      function changeFooterText(){
+
+      }
+
+      /* EXERCISE 11
+      Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+      */
+
+      const inputField = document.getElementById('input-field')
+      
+
+      /* EXERCISE 12
+      Create a new welcome alert message when the page successfully loads.
+      */
+
+      window.onload = function(){
+
+      }
+
+      /* EXERCISE 13
+      Use HTML5 tags to divide the content of the page in a more semantic way.
+      */
+
+    </script>
+  </body>
+</html>
