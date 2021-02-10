@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List App</title>
+    <link rel="stylesheet" href="/m1-d8/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Welcome to your personal Task List!</h1>
+    <div id="taskList">
+
+      <input type="text" id="newTask" /> <br />
+
+      <div id ="buttons">
+      <input type="button" value="Add new Task" onclick="addNewTask()" /> 
+      <input type="button" value="Remove Last Task"onclick="removeLast()"/>
+      <input type="button" value="Remove First Task"onclick="removeFirstTask()"/>
+      <input type="button" value="Change task background"onclick="changeTaskBackgroundColor()"/>
+      </div>
+
+      <ul id="myTaskList"></ul>
+
+      <div id="color-picker">
+      <input type="color" placeholder="Color" id="colorPicker" />
+      <input type="button" value="Sort" onclick="bubblesort()" />
+      </div>
+
+      <script src="/m1-d8/index.js"></script>
+    </div>
+  </body>
+</html>
