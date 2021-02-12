@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+table,
+td,
+tr {
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+td {
+  width: 100px;
+  padding: 0;
+  border-color: green;
+}
+
+.horizontal-line {
+  border-top: 3px solid blue;
+  width: 200vh;
+}
+
+.table,
+h1,
+.list,
+footer,
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: blueviolet;
+}
+
+p {
+  margin: 10px;
+}
+
+.change-font {
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.hide-me {
+  display: none;
+}
