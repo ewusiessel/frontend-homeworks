@@ -65,9 +65,8 @@
 // */
 
 // /* WRITE YOUR CODE HERE */
-// let myVariable = (12-x)
-// console.log(myVariable + 12)
 
+// console.log(x - 12)
 
 // /* EXERCISE 7
 // Create two variables: name1 and name2. name1 is equal to john, name2 is equal to John.
@@ -96,11 +95,43 @@
 
 // */
 
-// /* WRITE YOUR CODE HERE */
-// let x = 5
-// x = "five"
+/* WRITE YOUR CODE HERE */
 
-// console.log (x)
+const number = function(n){
+    
+    if (n === 1){
+        console.log("one")
+    }
+    else if (n === 2){
+        console.log("two")
+    }
+    else if (n === 3){
+        console.log("three")
+    }
+    else if (n === 4){
+        console.log("four")
+    }
+    else if (n === 5){
+        console.log("five")
+    }
+    else if (n === 6){
+        console.log("six")
+    }
+    else if (n === 7){
+        console.log("seven")
+    }
+    else if (n === 8){
+        console.log("eight")
+    }
+    else if (n === 9){
+        console.log("nine")
+    }
+    else {
+        console.log("that is not allowed")
+    }
+}
+
+number(8)
 
 // /* EXERCISE 9
 // [Extra] Insert a value in a variable based on the result of a ternary if (topic not covered during lesson, try to search it by yourself, tomorrow morning we'll discuss it together ;) )
@@ -119,11 +150,5 @@
 
 // __________________________
 
-// console.log("spice girls".toUpperCase)
 
-const bestAlbum = "spice Girls"
 
-console.log ("I hated " + bestAlbum.toLowerCase())
-
-let newAlbum = bestAlbum.toUpperCase()
-console.log(newAlbum)

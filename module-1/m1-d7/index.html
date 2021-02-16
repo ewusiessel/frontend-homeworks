@@ -80,7 +80,7 @@
 
       function changePcontent(){
         const newPcontent = document.querySelector('div', 'p')
-        newPcontent.innerText = ('You have been officially replaced by something else :-)')
+        newPcontent.innerText = ('You have been officially replaced with something else :-)')
 
       }
 
@@ -101,6 +101,8 @@
 
       function addToTheSecond(content){
         const newLine = document.querySelector('#secondList')
+        console.log(newLine.innerHTML)
+        newLine.innerHTML += '<li>4th</li>'
 
 
       }
@@ -110,20 +112,21 @@
       */
 
       function addParagraph(content){
-         const newPara = document.createElement('p')
-            newPara.innerText = ("This is a pseudo paragraph, I am a ghost")
-                let currentPara = document.querySelector('div','p')
-            
-     
-
+        const newparagraph = document.querySelector('div')
+        console.log(newparagraph.innerHTML)
+        newparagraph.innerHTML += '<p> I am a new paragraph </p>'
+         
       }
 
       /* EXERCISE 7
       Write a function for making the first UL disappear.
       */
 
-      function firstUlDisappear() {
-
+      function firstUlDisappear(){
+        const newDisappear = document.querySelector('a')
+        console.log(newDisappear.getAttribute('style'))
+        newDisappear.setAttribute('style', 'display: none')
+       
       }
 
       /* EXERCISE 8
@@ -131,6 +134,9 @@
       */
 
       function paintItGreen(){
+        const makeGreen = document.querySelector('a')
+        console.log(makeGreen.getAttribute('style'))
+        makeGreen.setAttribute('style', 'color: green')
 
       }
 

@@ -10,49 +10,50 @@ ASSIGNMENT RULES
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
 */
 
-const area = function(l1, l2){
-    result = l1 * l2
-    return console.log('area of the rectangle is ' + l1 * l2)
-}
+// const area = function(l1, l2){
+//     result = l1 * l2
+//     return console.log('area of the rectangle is ' + l1 * l2)
+// }
 
-area( 3, 4) /*example
+// area( 3, 4) // <=== input values here
 
 /* EXERCISE 2
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
 
-const crazySum = function(l3, l4){
-    result = l3 + l4
-    if (l3 === l4){
-        console.log ((l3 + l4)*3)
-    }
-    else {
-        console.log(l3 + l4)
-    }
+// const crazySum = function(l3, l4){
+//     result = l3 + l4
+//     if (l3 === l4){
+//         console.log ((l3 + l4)*3)
+//     }
+//     else {
+//         console.log(l3 + l4)
+//     }
 
-}
+// }
 
-crazySum(5, 5) /*example
+// crazySum(5, 5) // <=== input values here
 
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 It should return triple their absolute difference if the given number is greater than 19.
 */
 
-const y = 19
-const crazyDiff = function (x, y) {
-    result  = x - y
-    return console.log(x - y) * 3
-    if ( y >= 19){
-     const x = console.log(crazyDiff * 3) 
-    }   
-    else {
-        
-    }
 
-}
+// const crazyDiff = function (x, y = 19){
 
-crazyDiff(50, 19)
+//      if (x > y) {
+
+//     console.log(3 * (x - y))
+
+//     }
+
+//     else {
+//         console.log(x - y)
+//     }
+// }
+
+// crazyDiff(23) // <=== input values here
 
 
 /* EXERCISE 4
@@ -61,7 +62,19 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 
 /* WRITE YOUR CODE HERE */
 
-// const boundary = function(n, )
+// const boundary = function( n ) {
+//     if (n >= 20 && n == 100 || n == 400){
+//          console.log("true")
+//     }
+//     else {
+//         console.log("false")
+//     }  
+    
+// }
+
+// boundary(18) // <=== input values here
+
+
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
@@ -69,6 +82,8 @@ It should add the word "Strive" in front of the given string, but if the given s
 */
 
 /* WRITE YOUR CODE HERE */
+
+
 
 
 /* EXERCISE 6
