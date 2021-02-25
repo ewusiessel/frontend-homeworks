@@ -1,0 +1,33 @@
+.navbar-brand {
+  font-size: 30px;
+}
+
+.nav-logo-name {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 0;
+  height: 30px;
+}
+
+.btn-outline-success {
+  border-radius: 20px;
+  width: 80px;
+  background-color: orange;
+  color: #fff;
+  border: 0;
+  font-size: 0.5rem;
+}
+
+input.form-control {
+  font-size: 0.6rem;
+  border: 0;
+  height: 25px;
+  text-align: justify;
+}
+
+.alert {
+  border-radius: 0;
+  background-color: #fff;
+}
