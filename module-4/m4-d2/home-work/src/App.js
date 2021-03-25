@@ -7,7 +7,7 @@ import MyCustomContent from "./components/MyContent.jsx";
 const App = () => {
   return (
     <div>
-      <NavBar title="" />
+      <NavBar title="Book Store" />
       <MyCustomContent />
       <MyFooter />
     </div>

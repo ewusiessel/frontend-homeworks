@@ -1,8 +1,14 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 const MyCustomNavbar = (props) => (
-  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-    <Navbar.Brand href="#home">{props.title}Book Store</Navbar.Brand>
+  <Navbar
+    className="fixed-top"
+    collapseOnSelect
+    expand="lg"
+    bg="dark"
+    variant="dark"
+  >
+    <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Navbar.Collapse className="ml-auto">

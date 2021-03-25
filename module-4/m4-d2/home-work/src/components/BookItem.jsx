@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Button, Badge } from "react-bootstrap";
+import MyCommentsArea from "./CommentArea";
+
 export default function BookItem(props) {
   /**
      * 
@@ -11,9 +13,19 @@ export default function BookItem(props) {
     "category": "fantasy"
   },
      */
+
+  
+  clickHandler();
   return (
-    <Card>
+    <div>
+      <MyCommentsArea />
+    </div>
+  );
+}
+  return (
+    <Card className="my-5">
       <Card.Img
+        onClick={this.clickHandler}
         variant="top"
         src={props.book.img}
         style={{ height: 450, objectFit: "cover" }}
@@ -28,4 +40,5 @@ export default function BookItem(props) {
       </Card.Body>
     </Card>
   );
+  
 }
