@@ -181,24 +181,88 @@ function angleType(angle) {
 console.log(angleType(90));
 /*
 13)
-
+/*
 Create a function to find the index of the greatest element of a given array of integers
+*/
+function indexOfGrt(arr) {
+  if (arr.length === 0) {
+    return -1;
+  }
 
+  let max = arr[0];
+  let maxIndex = 0;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      maxIndex = i;
+      max = arr[i];
+    }
+  }
+
+  return maxIndex;
+}
+
+console.log(indexOfGrt([4, 5, 7, 9, 2, 9, 19]));
+/*
 14)
 
-Create a function to get the largest even number from an array of integers.
+/* Create a function to get the largest even number from an array of integers.
+*/
+
+function largestEven(arr) {
+  arr.sort((x, y) => y - x);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) return arr[i];
+  }
+}
+console.log(largestEven([40, 20, 10, 20]));
+
+/*
 
 15)
 
 Create a function to check from two given integers, whether one is positive and another one is negative.
-
+*/
+function isPosOrNeg(x, y) {
+  if ((x < 0 && y > 0) || (x > 0 && y < 0)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isPosOrNeg(-3, 4));
+/*
 16)
 
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+*/
+function upperlower(str) {
+  if (str.length < 3) {
+    return str.toUpperCase();
+  }
+  firstThree = str.substring(0, 3).toLowerCase();
+  lastThree = str.substring(3, str.length);
+  return firstThree + lastThree;
+}
+console.log(upperlower("WORlD"));
+/*
 
 17)
 
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+*/
+function someSum(x, y) {
+  const sumNums = x + y;
+  if (sumNums >= 50 && sumNums <= 80) {
+    return 65;
+  }
+  return 80;
+}
+
+console.log(someSum(45, 50));
+/*
+
 
 18)
 
@@ -219,4 +283,4 @@ this would be "34".
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
-*/
+//*/
