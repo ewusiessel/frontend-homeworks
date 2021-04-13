@@ -1,307 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <title>Fetch Album Api</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/album/album.css" />
-    <title>Spotify | Album</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <!-- Sidebar navigation DON'T DELETE SIDENAV LOL -->
-    <section id="sidenav">
-      <!-- Side-nav javascript automatically injected during window load in app.js -->
-    </section>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" href="#">Albums</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+     <button type="button" class="btn btn-primary mx-2" id ="listAlbums" onclick ="listAlbums()">List albums</button>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-danger" id="countUnique"onclick ="countUnique()">Count Unique</button>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    </form>
+  </div>
+</nav>
+  
 
-    <!-- Main content -->
-    <main id="main">
-      <div class="container mt-5">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
-          <div class="ablum-cover-section mb-4" style="max-width: 300px">
-            <img
-              class="img-fluid"
-              src="/assets/queens-ii-album-cover.jpg"
-              width="250px"
-              alt=""
-            />
-            <h3>Queen II (Deluxe Edition 2011 Remaster)</h3>
-            <p>Queen</p>
-            <button
-              type="button"
-              class="btn btn-success rounded-0 text-uppercase p-2 mb-2"
-            >
-              play
-            </button>
-            <p>1974 • 16 SONGS</p>
-            <i class="far fa-heart mt-4 pr-2"></i>
-            <span><i class="fas fa-ellipsis-h"></i></span>
-          </div>
-          <div class="w-100">
-            <table>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Procession - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Father to Son - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">
-                  White Queen (As It Began) - Remastered 2011
-                </td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Some Day One Day - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">
-                  The Loser in the End - Remastered 2011
-                </td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Ogre Battle - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">
-                  The Fairy Feller's Master-Stroke - Remastered 2011
-                </td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Nevermore - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">
-                  The March of the Black Queen - Remastered 2011
-                </td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Father to Son - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">Funny How Love Is - Remastered 2011</td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">
-                  Seven Seas of Rhye - Remastered 2011
-                </td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="icon-box">
-                  <ion-icon name="musical-note-outline"></ion-icon>
-                </td>
-                <td class="album-track">
-                  See What a Fool I've Been - Live BBC Session, London / July
-                  1973/2011 Remix
-                </td>
-                <td class="track-time" style="text-align: right">1:34</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td class="album-name">Queen</td>
-                <td></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </main>
+      <script src="index.js"></script>
 
-    <footer id="footer">
-      <!-- JS dynamically injected during window onload in app.js -->
-    </footer>
-    <script>
-      async function searchDeezer(query) {
-        try {
-          const response = await fetch(
-            " https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem",
-            {
-              method: "GET",
-              headers: {
-                "x-rapidapi-key":
-                  "410d132ae8msh57d91f7e209cf4ap193685jsn499bde3e3232",
-                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-              },
-            }
-          );
-          const data = await response.json();
-          return data;
-        } catch (error) {
-          console.log(error);
-        }
-      }
-
-      window.onload = async function () {
-        const data = await searchDeezer("Eminem");
-        console.log(data);
-      };
-
-      async function searchDeezer(query) {
-        try {
-          const response = await fetch(
-            " https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica",
-            {
-              method: "GET",
-              headers: {
-                "x-rapidapi-key":
-                  "410d132ae8msh57d91f7e209cf4ap193685jsn499bde3e3232",
-                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-              },
-            }
-          );
-          const data = await response.json();
-          return data;
-        } catch (error) {
-          console.log(error);
-        }
-      }
-
-      window.onload = async function () {
-        const data = await searchDeezer("Metallica");
-        console.log(data);
-      };
-    </script>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../app.js" type="module"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+<!-- fetch api -->
+
