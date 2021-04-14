@@ -284,3 +284,18 @@ this would be "34".
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
 //*/
+
+function returnAcronym(phrase) {
+  let newPhrase = phrase.split(' ');
+  let res = '';
+  newPhrase.forEach((el) => {
+    const [char] = el;
+    if (char === char.toUpperCase() && char !== char.toLowerCase()) {
+      res += char;
+    }
+  });
+  return res;
+}
+
+console.log(returnAcronym("British Broadcasting Corporation"));
+console.log(returnAcronym("Bachelor of Science & Technology"));
