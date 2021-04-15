@@ -42,27 +42,33 @@
             />
             <div class="input-group-append" id="button-addon4">
               <button class="btn btn-outline-secondary" type="button">
-                <i class="fas fa-chevron-up text-white"></i>
-              </button>
-              <button class="btn btn-outline-secondary" type="button">
-                <i class="fas fa-chevron-down text-white"></i>
-              </button>
-              <button class="btn btn-outline-secondary" type="button">
-                <i class="fas fa-shopping-cart text-white p-2"></i>
-              </button>
-              <button class="btn btn-outline-secondary" type="button">
-                <i class="far fa-trash-alt text-white p-2"></i>
+                Search
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+   <div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-btn btn-primary mt-3 " onclick="shopbook()">Shop Books</button>
+    </div>
+  </div>
+</div>
+
+   
+   
 
     <script>
+    function shopbook () {
       fetch("https://striveschool-api.herokuapp.com/books")
-        .then((response) => response.json())
-        .then((data) => console.log(data));
+          .then((response) => response.json())
+          .then((arrayOfBooks) => {console.log(arrayOfBooks)
+         
+          })
+      }
+       
     </script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
