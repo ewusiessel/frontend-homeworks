@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
-    <style>
-      h1 {
-        text-align: center;
-        margin-top: 10%;
-      }
-    </style>
-    <title>Amazon CRUD Data</title>
-  </head>
-  <body>
-    <h1>Amazon Product Data</h1>
-    <!--
-          
-            You are building the new Amazon.
+ You are building the new Amazon.
             This time you are also responsible for the back office.
 
-            THIS is your CRUD endpoint
+            THIS is you CRUD endpoint
             https://striveschool-api.herokuapp.com/api/product/
 
             The product model is 
@@ -73,35 +44,3 @@
                 "username": "testusername@yourmail.com",
                 "password":"pass"
             }   
-
-        -->
-
-    <script>
-      window.onload = async () => {
-        const url = "product-model.txt";
-
-        const amazonProduct = () => {
-          fetch("https://striveschool-api.herokuapp.com/api/product/", {
-            headers: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMjM5Zjg5YzI2ZjAwMTU3ZjljOTkiLCJpYXQiOjE2MTU5OTU4MDgsImV4cCI6MTYxNzIwNTQwOH0.LWzR4kWdoPh4zarAcm4P2exYL-REi4WotrlvpUlpKxM"
-
-
-            .then((res) => res.json())
-            .then((data) => console.log(data))
-            .catch((err) => console.log(err));
-        }
-      });
-    </script>
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
