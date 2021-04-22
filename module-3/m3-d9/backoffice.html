@@ -1,181 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Amazon Backoffice</title>
+    <title>Amazon Back Office</title>
+    <style>
+      h1 {
+        text-align: center;
+        margin-top: 10%;
+      }
+     
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand " href="./index.html">STORE</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link " href="./index.html">HOME</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./backoffice.html">BACKOFFICE</a>
-            
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container text-center">
-      <h1>PRODUCT GENERATION</h1>
-      <h2 class="my-5" id="subTitle"></h2>
-      <div class="row">
-        <div class="col col-md-6 offset-md-3">
-          <form onsubmit="handleSubmit(product)">
-            <div class="form-group">
-              <label for="name">Product name</label>
-              <input
-                id="name"
-                type="text"
-                class="form-control"
-                placeholder="Describe product here"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="description">Product description</label>
-              <textarea
-                id="description"
-                rows="4"
-                class="form-control"
-                placeholder="Write the product description here"
-                required
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <label for="price">Product price</label>
-              <input
-                id="price"
-                type="number"
-                class="form-control"
-                placeholder="Enter product price here"
-              />
-            </div>
-           
-            <div class="form-group">
-              <button class="btn btn-success" type="submit">
-                Submit product
-              </button>
-            </div>
-          </form>                            
-        </div>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Amazon</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="/home.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/backoffice.html">Back Office<span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+    <!-- <h1></h1> -->
+
+    <!-- form -->
+
+<div class="container">
+  <div class="row">
+   <div class="col-10 col-md-6 mx-auto">
+
+
+      <form onsubmit="handleSubmit(product)">
+
+      <!-- {
+        "_id": "6080c1e5b1f0fb0015d91876",
+        "name": "prd 1",
+        "price": 100,
+        "brand": "prd brand",
+        "description": "prd desc",
+        "imageUrl": "examaple.com",
+        "userId": "6080af15b1f0fb0015d9184e",
+        "createdAt": "2021-04-22T00:23:01.743Z",
+        "updatedAt": "2021-04-22T00:23:01.743Z",
+        "__v": 0
+      } -->
+
+      <!-- product name -->
+    <div class="form-group">
+      <label for="">Name of Product</label>
+      <input type="text" class="form-control" id="name"  placeholder="Product Name"required>
     </div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-
-
-    <script>
-      const url = "https://striveschool-api.herokuapp.com/api/product/";
-      let id; 
+    <!-- product price -->
+    <div class="form-group">
+      <label for="">Price</label>
+      <input type="number" class="form-control" id="price" placeholder="Enter Price"required>
+    </div>
+    <!-- product brand -->
+    <div class="form-group">
+      <label for="">Brand</label>
+      <input type="text" class="form-control" id="brand" placeholder="Brand Name"required>
+    </div>
+    <!-- product description -->
+    <div class="form-group">
+      <label for="">Product Description</label>
+      <textarea class="form-control" id="description" placeholder="Description..."required></textarea>
       
+    </div>
+    <!-- product image -->
+    <div class="form-group">
+      <label for="">Image URL</label>
+      <input type="text" class="form-control" id="image" placeholder="Enter Image URL">
+    </div>
+    <div class="form-group d-flex">
+      <input type="submit" class="btn btn-primary w-50 mx-auto">
+    </div>
+  </form>
+   </div>
+  </div>
+</div>
+
+<script>
+const endpoint_URL = "https://striveschool-api.herokuapp.com/api/product";
+const headers = new Headers ({
+  "Content-Type": "application/json",
+  Authorization: 
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MTkwNDYxNjUsImV4cCI6MTYyMDI1NTc2NX0.oE_2Fx-DBoPQxBMTSJVtCvBLbuK6y4bCfMqBMoEO6nI",
+});
+
+const postProduct = (product, callback) => {
+  fetch(endpoint_URL, { 
+    headers,
+    method: "POST",
+    body: JSON.stringify(product)
+  })
+
+  .then((response) => response.json())
+  .then((data) =>callback(null, data))
+  .catch((error) => callback(error,null))
+};
 
 
-      window.onload = async () => {
-        console.log("page has been loaded");
-        let urlParams = new URLSearchParams(window.location.search);
-        id = urlParams.get("id");
-        console.log("ID IS", id);
+const formOnSubmit = function (e) {
+  e.preventDefault();
+  const name = document.querySelector('#name').value;
+  const price = document.querySelector('#price').value;
+  const brand = document.querySelector('#brand').value;
+  const description = document.querySelector('#description').value;
+  const image = document.querySelector('#image').value
+
+};
+
+window.onload = function () {
+  const form = document.querySelector('form');
+  form.onsubmit = formOnSubmit;
+}
+</script>
 
 
-        if (id) {
-          document.getElementById("subTitle").innerText = "EDIT product";
-          let response = await fetch(url + id);
-          let productDetails = await response.json();
-          console.log(productDetails);
-          document.getElementById("name").value = productDetails.name;
-          document.getElementById("description").value =
-            productDetails.description;
-          document.getElementById("price").value = productDetails.price;
-        } else {
-          document.getElementById("subTitle").innerText = "CREATE PRODUCT";
-        }
-      };
-
-      const handleSubmit = async (e) => {
-        e.prproductDefault();
-        let myproduct = {
-          name: document.getElementById("name").value,
-          description: document.querySelector("#description").value,
-          price: document.querySelector("#price").value,
-        };
-
-        console.log(myproduct);
-        let response;
-
-        try {
-          if (id) {
-            response = await fetch(url + id, {
-              method: "PUT",
-              body: JSON.stringify(myproduct),
-              headers: {
-                "Content-Type": "application/json",
-              },
-            });
-          } else {
-            response = await fetch(url, {
-              method: "POST",
-              body: JSON.stringify(myproduct),
-              headers: {
-                "Content-Type": "application/json",
-              },
-            });
-          }
-
-          console.log(response);
-
-          if (response.ok) {
-            alert(`product was ${id ? "edited" : "created"} successfully!`);
-            window.location.assign("index.html");
-          } else {
-            alert("something went wrong :(");
-          }
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
