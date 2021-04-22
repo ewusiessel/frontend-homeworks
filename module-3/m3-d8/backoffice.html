@@ -14,6 +14,7 @@
         text-align: center;
         margin-top: 10%;
       }
+     
     </style>
   </head>
   <body>
@@ -34,7 +35,101 @@
     </ul>
   </div>
 </nav>
-    <h1></h1>
+    <!-- <h1></h1> -->
+
+    <!-- form -->
+
+<div class="container">
+  <div class="row">
+   <div class="col-10 col-md-6 mx-auto">
+
+
+      <form onsubmit="handleSubmit(product)">
+
+      <!-- {
+        "_id": "6080c1e5b1f0fb0015d91876",
+        "name": "prd 1",
+        "price": 100,
+        "brand": "prd brand",
+        "description": "prd desc",
+        "imageUrl": "examaple.com",
+        "userId": "6080af15b1f0fb0015d9184e",
+        "createdAt": "2021-04-22T00:23:01.743Z",
+        "updatedAt": "2021-04-22T00:23:01.743Z",
+        "__v": 0
+      } -->
+
+      <!-- product name -->
+    <div class="form-group">
+      <label for="">Name of Product</label>
+      <input type="text" class="form-control" id="name"  placeholder="Product Name"required>
+    </div>
+    <!-- product price -->
+    <div class="form-group">
+      <label for="">Price</label>
+      <input type="number" class="form-control" id="price" placeholder="Enter Price"required>
+    </div>
+    <!-- product brand -->
+    <div class="form-group">
+      <label for="">Brand</label>
+      <input type="text" class="form-control" id="brand" placeholder="Brand Name"required>
+    </div>
+    <!-- product description -->
+    <div class="form-group">
+      <label for="">Product Description</label>
+      <textarea class="form-control" id="description" placeholder="Description..."required></textarea>
+      
+    </div>
+    <!-- product image -->
+    <div class="form-group">
+      <label for="">Image URL</label>
+      <input type="text" class="form-control" id="image" placeholder="Enter Image URL">
+    </div>
+    <div class="form-group d-flex">
+      <input type="submit" class="btn btn-primary w-50 mx-auto">
+    </div>
+  </form>
+   </div>
+  </div>
+</div>
+
+<script>
+const endpoint_URL = "https://striveschool-api.herokuapp.com/api/product";
+const headers = new Headers ({
+  "Content-Type": "application/json",
+  Authorization: 
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MTkwNDYxNjUsImV4cCI6MTYyMDI1NTc2NX0.oE_2Fx-DBoPQxBMTSJVtCvBLbuK6y4bCfMqBMoEO6nI",
+});
+
+const postProduct = (product, callback) => {
+  fetch(endpoint_URL, { 
+    headers,
+    method: "POST",
+    body: JSON.stringify(product)
+  })
+
+  .then((response) => response.json())
+  .then((data) =>callback(null, data))
+  .catch((error) => callback(error,null))
+};
+
+
+const formOnSubmit = function (e) {
+  e.preventDefault();
+  const name = document.querySelector('#name').value;
+  const price = document.querySelector('#price').value;
+  const brand = document.querySelector('#brand').value;
+  const description = document.querySelector('#description').value;
+  const image = document.querySelector('#image').value
+
+};
+
+window.onload = function () {
+  const form = document.querySelector('form');
+  form.onsubmit = formOnSubmit;
+}
+</script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

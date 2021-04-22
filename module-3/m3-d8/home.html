@@ -33,61 +33,74 @@
     </ul>
   </div>
 </nav>
-    <h1></h1>
+    <!-- <h1></h1> -->
+
+
+
 
     <!-- Product Card -->
     <div class="container">
       <div class="row">
-        <div id="product-list"  class="col-10 col-md-6 mx-auto">  
-                  <!-- dynamically add product cards --> 
+        <div class="col-12 col-md-12 mx-auto">  
+          <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Product</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Image</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody id="product-list">
+
+          
+    <!-- dynamically add product rows --> 
+
+
+  </tbody>
+</table>
       </div>
   </div>
 </div>
 
 <script>
-  const productList = document.querySelector(product-list)
-  const endpoint = "https://striveschool-api.herokuapp.com/api/product/"
+ const endpoint_URL = "https://striveschool-api.herokuapp.com/api/product";
+  const headers = new Headers ({
+  "Content-Type": "application/json",
+  Authorization: 
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MTkwNDYxNjUsImV4cCI6MTYyMDI1NTc2NX0.oE_2Fx-DBoPQxBMTSJVtCvBLbuK6y4bCfMqBMoEO6nI",
+});
+ 
+const getProducts = (callback) => {
+  fetch (endpoint_URL,{headers})
+  .then((response) => response.json())
+  .then((data) => callback(null, data))
+  .catch((error) => callback(error, null));
+};
 
-  window.onload = async function() {
-
-
-
-
-    async function loadProducts () {
-      const response = await fetch(endpoint)
-
-      if (response.ok){
-        const products = await response.json()
-        return products
-
-      }else {
-        throw new error ("Failed to fetch products")
-      }
+window.onload = function (){
+  getProducts((error,data) => {
+    console.log(data)
+    if (error) {
+      console.log({error});
+    }else{
+      const content = document.querySelector("#product-list");
+      content.innerHTML = "";
+      data.forEach((product) => {
+        content.innerHTML += `<tr>
+      <th scope="row">1</th>
+      <td class="product-name">${product.name}</td>
+      <td class="product-brand">${product.brand}</td>
+      <td class="product-image">${product.imageURL}</td>
+      <td class="product-description">${product.description}</td>
+      <td class="product-price">${product.price}</td>
+       </tr>`
+      });
     }
-
-    function displayProducts(product){
-      productList.innerHTML =""
-
-
-      for(let product of products){
-        productList.innerHTML += `<div class="card" style="width: 18rem;">
-        <img class="card-img-top mt-4" src=${image} alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title">${product.brand}</h5>
-        <p class="card-text">${product.description}</p>
-        <span>${product.price}</span>
-      <a href="#" class="btn btn-primary ml-5">Buy</a>
-    </div>
-    </div>`
-      }
-    }
-
-
-  }
-
-
-
-
+  })
+}
 </script>
 
 
@@ -99,9 +112,3 @@
   </body>
 </html>
 
-
-
-
-<!-- 
-product literal template -->
-<!-- 
