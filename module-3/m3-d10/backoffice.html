@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+
+<style>
+    *body {
+        background: #000;
+    }
+    label {
+        color: white;
+    }
+</style>
+
+
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6 mx-auto">
+          <form onsubmit="handleSubmit(product)">
+    
+          <!-- {
+            "_id": "6080c1e5b1f0fb0015d91876",
+            "nameTitle": "movie 1",
+            "description": "movie desc",
+            "imageUrl": "examaple.com",
+            "createdAt": "2021-04-22T00:23:01.743Z",
+            "updatedAt": "2021-04-22T00:23:01.743Z",
+            "__v": 0
+          } -->
+    
+          <!-- movie name -->
+                <div class="form-group">
+                <label for="">Title of Movie</label>
+                <input type="text" class="form-control" id="name"  placeholder="Movie Title"required>
+                </div>
+                <!-- movie description -->
+                <div class="form-group">
+                <label for="">Description</label>
+                <textarea type="text" class="form-control" id="price" placeholder="Enter Description"required></textarea>
+                </div>
+                <!-- category -->
+                 <label for="">Movie Category</label>
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Comedy</option>
+                    <option value="2">Action</option>
+                    <option value="3">Thriller</option>
+                </select>
+                </div>
+                <!-- movie image -->
+                <div class="form-group">
+                <label for="">Image URL</label>
+                <input type="text" class="form-control" id="image" placeholder="Enter Image URL">
+                </div>
+                <div class="form-group d-flex">
+                <input type="submit" class="btn btn-danger w-50 mx-auto">
+        </div>
+        </div>
+        </div>
+      </form>
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
