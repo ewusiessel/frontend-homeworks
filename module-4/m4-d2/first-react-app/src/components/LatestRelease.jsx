@@ -11,7 +11,7 @@ const BookImages = () => (
     <Row className="mb-5">
       {books.map((book) => (
         <Col sm={12} md={3}>
-          <Card className="mt-2" style={{ width: "12rem" }}>
+          <Card className="mt-2" style={{ width: "12rem" }} key={book.asin}>
             <Card.Img variant="top" src={book.img} />
             <Card.Body>
               <Card.Title style={{ fontSize: "0.8rem" }}>
