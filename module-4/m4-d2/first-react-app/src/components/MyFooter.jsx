@@ -1,12 +1,18 @@
-import { Navbar, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Footer() {
-    return (
-      <Navbar className="text-center bg-dark text-muted">
-        <Col>Footer Copyright</Col>
-      </Navbar>
-    );
+  return (
+    <Container
+      fluid
+      className="text-center bg-dark text-muted"
+      style={{ height: "160px" }}
+    >
+      <Col>
+        <div>Footer Copyright © 2021 </div>
+      </Col>
+    </Container>
+  );
 }
 
 export default Footer;

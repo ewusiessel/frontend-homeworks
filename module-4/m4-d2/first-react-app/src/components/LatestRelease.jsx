@@ -1,19 +1,30 @@
-import { Card, Button } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import books from "../data/romance.json"
 
 
 
 
 const BookImages = () => (
+  <Container className="">
+    <h5 className="mt-3">Latest Release</h5>
 
-  <Card style={{ width: "12rem" }}>
-    <Card.Img variant="top" src={books[0].img} />
-    <Card.Body>
-      <Card.Title></Card.Title>
-      <Card.Text></Card.Text>
-      <Button variant="danger">Button</Button>
-    </Card.Body>
-  </Card>
+    <Row className="mb-5">
+      {books.map((book) => (
+        <Col sm={12} md={3}>
+          <Card className="mt-2" style={{ width: "12rem" }}>
+            <Card.Img variant="top" src={book.img} />
+            <Card.Body>
+              <Card.Title style={{ fontSize: "0.8rem" }}>
+                {book.title}
+              </Card.Title>
+              <Card.Text></Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  </Container>
 );
 
 export default BookImages
+
