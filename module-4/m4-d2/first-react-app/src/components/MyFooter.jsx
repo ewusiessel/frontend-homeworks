@@ -9,7 +9,7 @@ function Footer() {
       style={{ height: "160px" }}
     >
       <Col>
-        <div>Footer Copyright © 2021 </div>
+        <div style={{paddingTop:"50px"}}>Footer Copyright © 2021 </div>
       </Col>
     </Container>
   );
