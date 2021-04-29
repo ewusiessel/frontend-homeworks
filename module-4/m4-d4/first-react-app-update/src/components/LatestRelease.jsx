@@ -1,7 +1,8 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import books from "../data/romance.json"
+import fantasy from "../data/fantasy.json";
 
 
+const selectedBook = [...fantasy.slice(-12)]
 
 
 const BookImages = () => (
@@ -9,7 +10,7 @@ const BookImages = () => (
     <h5 className="mt-3">Latest Release</h5>
 
     <Row className="mb-5">
-      {books.map((book) => (
+      {selectedBook.map((book) => (
         <Col sm={12} md={3}>
           <Card className="mt-2" style={{ width: "12rem" }} key={book.asin}>
             <Card.Img variant="top" src={book.img} />
@@ -27,4 +28,3 @@ const BookImages = () => (
 );
 
 export default BookImages
-
