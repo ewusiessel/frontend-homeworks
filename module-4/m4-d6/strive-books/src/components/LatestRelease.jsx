@@ -1,9 +1,8 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import fantasy from "../data/fantasy.json";
+import CommentList from "./ CommentList";
 
-
-const selectedBook = [...fantasy.slice(-12)]
-
+const selectedBook = [...fantasy.slice(-12)];
 
 const BookImages = () => (
   <Container className="">
@@ -18,7 +17,13 @@ const BookImages = () => (
               <Card.Title style={{ fontSize: "0.8rem" }}>
                 {book.title}
               </Card.Title>
-              <Card.Text></Card.Text>
+              <Card.Text>
+                {this.props.bookInfo.category} - {this.props.bookInfo.price}£
+              </Card.Text>
+              <CommentList
+                comments={this.state.cmments}
+                bookId={this.props.bookInfo.asin}
+              />
             </Card.Body>
           </Card>
         </Col>
@@ -27,4 +32,4 @@ const BookImages = () => (
   </Container>
 );
 
-export default BookImages
+export default BookImages;
