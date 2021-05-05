@@ -1,0 +1,35 @@
+document.body {
+  background-color: black;
+  height: 100%;
+  color: white;
+}
+
+#root {
+  background-color: black;
+
+  height: 100%;
+}
+#logo {
+  height: 38px;
+  margin-right: 20px;
+}
+
+#navbar {
+  background-color: black !important;
+  border-bottom: solid 1px rgb(112, 112, 112) !important;
+}
+
+#navLink {
+  color: azure;
+}
+
+.supermargin {
+  margin-top: 300px;
+}
+
+.img-fluid:hover {
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.09);
+}
