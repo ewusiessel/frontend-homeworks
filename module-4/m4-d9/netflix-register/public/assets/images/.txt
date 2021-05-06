@@ -1,0 +1,30 @@
+Netflix, Register
+Use your React skills to improve your existing projects.
+Netflix App
+1. Create a new Registration Component mounted on a new route /register and a button in the navbar to get there.
+2. In this Registration Component, create a Controlled Form with:
+    Name - Required, at least 2 chars
+    Surname - Required, at least 3 chars
+    Email - Required - Should be an email field
+    Password - Required - Should contain at least 8 chars, 1 digit, 1 letter
+    Year of Birth - Required - from 1910+
+    Street Address - Required
+    City - Required
+    Postal Code - Required - Numeric 5 digits
+    Credit card - XXXX-XXXX-XXXX-XXXX (EXTRA)
+3. All the messages / errors should be displayed properly on the page.
+4. The submit button from the form should be "ENABLED" only when the form is validated and when each input's constraints are fulfilled. When clicked it should display a recap of the information submitted (you can choose between mounting a component for it dynamically in the same route or redirecting the user to a new route).
+5. [EXTRA] Transform the "AddComment" form into a Controlled one.
+
+EXTRA - Strive Books
+
+
+Create a new Registration Component on a new route /register and a button in the navbar to get there.
+In this Registration Component, create a Controlled Form with:
+    Name - Required, at least 2 chars
+    Surname - Required, at least 3 chars
+    Email - Required - Should be an email field
+    Password - Required - Should contain at least 8 chars, 1 digit, 1 letter
+    PasswordConfirm - Required - Should be equal than Password
+All the messages / errors should be displayed properly on the page
+The submit button from the form should be "ENABLED" only when the form is validated and when each input's constraints are fulfilled. When clicked it should display a recap of the information submitted (you can choose between mounting a component for it dynamically in the same route or redirecting the user to a new route)..
