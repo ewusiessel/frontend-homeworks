@@ -7,6 +7,13 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Component } from "react";
 
 class MyNavBar extends Component {
+  constructor(props) {
+    super(props);
+    console.log("i am a constructor")
+  }
+
+
+
   render() {
     return (
       <Navbar bg="dark" variant="dark" expand="lg">

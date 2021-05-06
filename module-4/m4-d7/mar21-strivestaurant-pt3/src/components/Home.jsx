@@ -31,60 +31,61 @@ class Home extends React.Component {
     render() { // render is the ONLY REQUIRED method in a class component
         console.log(this.props)
         return (
-            <Container>
-                {/* <div class="container" /> */}
-                <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={8}>
-                        <Reservations />
-                    </Col>
-                </Row>
-                <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={8}>
-                        {/* <div class="col col-xs-12 col-md-6">
+          <Container>
+            {/* <div class="container" /> */}
+            <Row className="justify-content-center mt-3">
+              <Col xs={12} md={8}>
+                <Reservations />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mt-3">
+              <Col xs={12} md={8}>
+                {/* <div class="col col-xs-12 col-md-6">
                                 COL CONTENT
                             </div>
                         */}
-                        <h1>Welcome to Strivestaurant</h1>
-                        <p>The best pasta dishes you can find on the web!</p>
-                        <Carousel>  
-                            {
-                                // every time you do a .map in react you'll need to
-                                // differentiate each one of the JSX elements you're generating
-                                items.map((item, index) => (
-                                    // we need to let React know that all these carousel slides are different
-                                    <Carousel.Item
-                                        key={item.name}
-                                        // the key prop must be unique for every slide
-                                        onClick={() => this.setState({ selectedDish: item })}
-                                    >
-                                        {/* the key is necessary for React's VIRTUAL DOM */}
-                                        <img
-                                            className="d-block w-100"
-                                            src={item.image}
-                                            alt="First slide"
-                                        />
-                                        <Carousel.Caption>
-                                            <h3>{item.name}</h3>
-                                            <p>{item.description}</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                ))
-                            }
-                        </Carousel>
-                    </Col>
-                </Row>
-                <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={8}>
-                        <DishComments dish={this.state.selectedDish} marginTop={0} />
-                    </Col>
-                </Row>
-                <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={8}>
-                        <ReservationForm />
-                    </Col>
-                </Row>
-            </Container>
-        )
+                <h1>Welcome to Strivestaurant</h1>
+                <p>The best pasta dishes you can find on the web!</p>
+                <Carousel>
+                  {
+                    // every time you do a .map in react you'll need to
+                    // differentiate each one of the JSX elements you're generating
+                    items.map((item, index) => (
+                      // we need to let React know that all these carousel slides are different
+                      <Carousel.Item
+                        key={item.name}
+                        // the key prop must be unique for every slide
+                        onClick={() => this.setState({ selectedDish: item })}
+                      >
+                        {/* the key is necessary for React's VIRTUAL DOM */}
+                        <img
+                          className="d-block w-100"
+                          src={item.image}
+                          alt="First slide"
+                          style={{ cursor: "pointer" }}
+                        />
+                        <Carousel.Caption>
+                          <h3>{item.name}</h3>
+                          <p>{item.description}</p>
+                        </Carousel.Caption>
+                      </Carousel.Item>
+                    ))
+                  }
+                </Carousel>
+              </Col>
+            </Row>
+            <Row className="justify-content-center mt-3">
+              <Col xs={12} md={8}>
+                <DishComments dish={this.state.selectedDish} marginTop={0} />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mt-3">
+              <Col xs={12} md={8}>
+                <ReservationForm />
+              </Col>
+            </Row>
+          </Container>
+        );
     }
 }
 

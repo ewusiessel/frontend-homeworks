@@ -12,3 +12,4 @@ Strivestaurant
 7. In Home.jsx give a "header" prop to the Reservations component. If present, this component should display it instead of the generic 'RESERVATIONS' in its h3.
 8. In the Home component use a ternary operator to replace the text inside the h1 and the p tags above the carousel with the values of the props "newTitle" and "newPayoff" respectively, if present.
 9. Change the "Strive for food" text in the MyNavBar component to "The perfect place for pasta lovers" if the prop title has a value of "Strivestaurant".
+
