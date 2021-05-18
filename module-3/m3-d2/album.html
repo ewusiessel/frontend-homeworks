@@ -12,24 +12,17 @@
   <body>
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
   <a class="navbar-brand" href="#">Albums</a>
-  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-      aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavId">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-     <button type="button" class="btn btn-primary mx-2" id ="listAlbums" onclick ="listAlbums()">List albums</button>
-      </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-danger" id="countUnique"onclick ="countUnique()">Count Unique</button>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-    </form>
-  </div>
 </nav>
   
+<div class="container">
+  <div class="row">
+    <button id="btn" type="button" class="my-3 mx-auto btn btn-primary">
+      List Albums
+    </button>
+  </div>
+  <div class="row" id="cardDiv"></div>
+</div>
+
 
       <script src="index.js"></script>
 
@@ -42,5 +35,5 @@
 </html>
 
 
-<!-- fetch api -->
+
 
