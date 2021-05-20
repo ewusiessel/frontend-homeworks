@@ -24,51 +24,85 @@
       crossorigin="anonymous"
     />
 
-    <title>Book Shopping Cart</title>
+      <style>
+        #cart {
+          position: fixed;
+          top: 50%;
+          left: 0px;
+          transform: translateY(-50%);
+          max-height: 50px;
+          max-width: 50px;
+          min-height: 50px;
+          min-width: 50px;
+          background-color:white;
+          border: 1px solid rgb(107, 32, 32);
+        }
+
+        #cart:hover {
+          max-height: unset;
+          max-width: unset;
+        }
+
+
+      </style>
+
+
   </head>
   <body>
-    <div class="container-fluid bg-dark p-5 mt-5">
-      <h4 class="text-white text-center">Books Shopping Cart</h4>
-      <div class="row">
-        <div class="container d-block mx-auto d-flex" style="width: 30%">
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control mx-auto p-4"
-              style="width: 50px"
-              placeholder="Books..."
-              aria-label=""
-              aria-describedby="button-addon4"
-            />
-            <div class="input-group-append" id="button-addon4">
-              <button class="btn btn-outline-secondary" type="button">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   <div class="container">
-  <div class="row">
-    <div class="col text-center">
-      <button class="btn btn-btn btn-primary mt-3 " onclick="shopbook()">Shop Books</button>
-    </div>
-  </div>
-</div>
 
-   
+    <div id="cart">
+    </div>
+
+   <div class="container">
+     <div id="books-wrapper" class="row">
+     <!-- function displayBooks() dynamically inserted here -->
+     </div>
+   </div>
    
 
     <script>
-    function shopbook () {
-      fetch("https://striveschool-api.herokuapp.com/books")
-          .then((response) => response.json())
-          .then((arrayOfBooks) => {console.log(arrayOfBooks)
-         
-          })
+
+      const bookWrapper = document.querySelector("#books-wrapper");
+
+    window.onload = () => {
+      loadBooks()
+          
       }
-       
+        let books = []
+        let shoppingCart = []
+
+       function loadBooks(){
+         fetch ("https://striveschool-api.herokuapp.com/books")
+         .then((resp) => resp.json())
+         .then((fetchedBooks) => { books = fetchedBooks; displayBooks()
+        console.log(fetchedBooks)
+        })
+          .catch((err) => console.error(err.message));
+       }
+
+       function displayBooks(){
+         books.forEach(book => {
+           bookWrapper.innerHTML += `
+           <div class="col-12 col-sm-6 col-md-4 col-lg-3"
+            <div class="card">
+              <img class="card-img-top img-fluid" src="${book.img}" alt="Card image cap" alt=${book.title}"">
+                <div class="card-body">
+                <h5 class="card-title">${book.title}</h5>
+                <div><span class="badge badge-danger">${book.category}</span></div>
+                <button class="btn btn-primary mt-3" onclick="addToCart(${book.asin})">£${book.price}</button>
+              </div>
+              </div>
+          </div>`
+         })
+
+       }
+
+       function addToCart(asin){
+         console.log(asin);
+         const book = books.flilter(book.asin === asin)[0]
+          shoppingCart.push(book)
+
+       }
     </script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
