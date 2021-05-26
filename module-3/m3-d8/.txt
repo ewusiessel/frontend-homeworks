@@ -44,3 +44,10 @@
                 "username": "testusername@yourmail.com",
                 "password":"pass"
             }   
+------------------------------------------------------------------------------------------------
+my token: 
+            fetch("https://striveschool-api.herokuapp.com/api/product/", {
+            headers: {
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MTkwNDYxNjUsImV4cCI6MTYyMDI1NTc2NX0.oE_2Fx-DBoPQxBMTSJVtCvBLbuK6y4bCfMqBMoEO6nI"
+}
+}
