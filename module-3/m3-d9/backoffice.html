@@ -1,12 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <title>Amazon Back Office</title>
     <style>
@@ -14,127 +22,168 @@
         text-align: center;
         margin-top: 10%;
       }
-     
     </style>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Amazon</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item ">
-        <a class="nav-link" href="/home.html">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/backoffice.html">Back Office<span class="sr-only">(current)</span></a>
-      </li>
-     
-    </ul>
-  </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Amazon</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/home.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/backoffice.html">
+              Back Office
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- <h1></h1> -->
 
     <!-- form -->
 
-<div class="container">
-  <div class="row">
-   <div class="col-10 col-md-6 mx-auto">
-
-
-      <form onsubmit="handleSubmit(product)">
-
+    <div class="container">
+      <div class="row">
+        <div class="col-10 col-md-6 mx-auto">
+          <form onsubmit="handleSubmit(product)">
       <!-- {
-        "_id": "6080c1e5b1f0fb0015d91876",
-        "name": "prd 1",
-        "price": 100,
-        "brand": "prd brand",
-        "description": "prd desc",
-        "imageUrl": "examaple.com",
-        "userId": "6080af15b1f0fb0015d9184e",
-        "createdAt": "2021-04-22T00:23:01.743Z",
-        "updatedAt": "2021-04-22T00:23:01.743Z",
-        "__v": 0
-      } -->
+    "_id": "60af002abe9b150015506dcd",
+    "name": "Belvita Soft Bakes Golden Grain Breakfast Biscuits 250 g (Pack of 6)",
+    "description": "Belvita Soft Bakes Golden Grain are soft baked biscuits made with wholegrain cereals and added vitamins and minerals",
+    "brand": "Belvita",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/91pzF5IeleL._AC_SL1500_.jpg",
+    "price": 15,
+    "userId": "60ae48d5ceaf480015c918a7",
+    "createdAt": "2021-05-27T02:12:58.957Z",
+    "updatedAt": "2021-05-27T08:19:51.316Z",
+    "__v": 0
+} -->
 
-      <!-- product name -->
-    <div class="form-group">
-      <label for="">Name of Product</label>
-      <input type="text" class="form-control" id="name"  placeholder="Product Name"required>
+            <!-- product name -->
+            <div class="form-group">
+              <label for="">Name of Product</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Product Name"
+                required
+              />
+            </div>
+            <!-- product description -->
+            <div class="form-group">
+              <label for="">Product Description</label>
+              <textarea
+                class="form-control"
+                id="description"
+                placeholder="Description..."
+                required
+              ></textarea>
+              <!-- product brand -->
+              <div class="form-group">
+                <label for="">Brand</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="brand"
+                  placeholder="Brand Name"
+                  required
+                />
+              </div>
+            </div>
+            <!-- product image -->
+            <div class="form-group">
+              <label for="">Image URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="image"
+                placeholder="Enter Image URL"
+              />
+            </div>
+            <!-- product price -->
+            <div class="form-group">
+              <label for="">Price</label>
+              <input
+                type="number"
+                class="form-control"
+                id="price"
+                placeholder="Enter Price"
+                required
+              />
+            </div>
+            <div class="form-group d-flex">
+              <input type="submit" class="btn btn-primary w-50 mx-auto" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <!-- product price -->
-    <div class="form-group">
-      <label for="">Price</label>
-      <input type="number" class="form-control" id="price" placeholder="Enter Price"required>
-    </div>
-    <!-- product brand -->
-    <div class="form-group">
-      <label for="">Brand</label>
-      <input type="text" class="form-control" id="brand" placeholder="Brand Name"required>
-    </div>
-    <!-- product description -->
-    <div class="form-group">
-      <label for="">Product Description</label>
-      <textarea class="form-control" id="description" placeholder="Description..."required></textarea>
-      
-    </div>
-    <!-- product image -->
-    <div class="form-group">
-      <label for="">Image URL</label>
-      <input type="text" class="form-control" id="image" placeholder="Enter Image URL">
-    </div>
-    <div class="form-group d-flex">
-      <input type="submit" class="btn btn-primary w-50 mx-auto">
-    </div>
-  </form>
-   </div>
-  </div>
-</div>
 
-<script>
-const endpoint_URL = "https://striveschool-api.herokuapp.com/api/product";
-const headers = new Headers ({
-  "Content-Type": "application/json",
-  Authorization: 
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MTkwNDYxNjUsImV4cCI6MTYyMDI1NTc2NX0.oE_2Fx-DBoPQxBMTSJVtCvBLbuK6y4bCfMqBMoEO6nI",
-});
+    <script>
+      const endpoint_URL = "https://striveschool-api.herokuapp.com/api/product";
+      const headers = new Headers({
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MTkwNDYxNjUsImV4cCI6MTYyMDI1NTc2NX0.oE_2Fx-DBoPQxBMTSJVtCvBLbuK6y4bCfMqBMoEO6nI",
+      });
 
-const postProduct = (product, callback) => {
-  fetch(endpoint_URL, { 
-    headers,
-    method: "POST",
-    body: JSON.stringify(product)
-  })
+      const postProduct = (product, callback) => {
+        fetch(endpoint_URL, {
+          headers,
+          method: "POST",
+          body: JSON.stringify(product),
+        })
+          .then((response) => response.json())
+          .then((data) => callback(null, data))
+          .catch((error) => callback(error, null));
+      };
 
-  .then((response) => response.json())
-  .then((data) =>callback(null, data))
-  .catch((error) => callback(error,null))
-};
+      const formOnSubmit = function (e) {
+        e.preventDefault();
+        const name = document.querySelector("#name").value;
+        const price = document.querySelector("#price").value;
+        const brand = document.querySelector("#brand").value;
+        const description = document.querySelector("#description").value;
+        const image = document.querySelector("#image").value;
+      };
 
-
-const formOnSubmit = function (e) {
-  e.preventDefault();
-  const name = document.querySelector('#name').value;
-  const price = document.querySelector('#price').value;
-  const brand = document.querySelector('#brand').value;
-  const description = document.querySelector('#description').value;
-  const image = document.querySelector('#image').value
-
-};
-
-window.onload = function () {
-  const form = document.querySelector('form');
-  form.onsubmit = formOnSubmit;
-}
-</script>
-
+      window.onload = function () {
+        const form = document.querySelector("form");
+        form.onsubmit = formOnSubmit;
+      };
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
