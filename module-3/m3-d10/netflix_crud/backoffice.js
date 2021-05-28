@@ -1,0 +1,73 @@
+const form = document.querySelector(".submit");
+const urlParams = new URLSearchParams(window.location.search);
+const movie_id = urlParams.get("id");
+const endpoint = movie_id
+  ? `https://striveschool-api.herokuapp.com/api/movies/${movie_id}`
+  : "https://striveschool-api.herokuapp.com/api/movies/";
+const method = movie_id ? "PUT" : "POST";
+let title = document.querySelector(".title");
+const deleteBtn = document.querySelector(".delete");
+
+window.onload = () => {
+  if (movie_id) {
+      title.innerHTML = `Update movie (id: ${movie_id})`;
+  }
+};
+
+const postPutMovies = async (e) => {
+  e.preventDefault();
+
+  const newMovie = {
+    name: document.querySelector("#name").value,
+    description: document.querySelector("#description").value,
+    category: document.querySelector("#category").value,
+    imageUrl: document.querySelector("#imageUrl").value,
+  };
+
+  try {
+    const response = await fetch(endpoint, {
+      method: method,
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MjIyMDAwOTUsImV4cCI6MTYyMzQwOTY5NX0.UHVKV5gRpR19xUDZRAVFb5chXxWAkKbfTHVZnAL4Uqg",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newMovie),
+    });
+    if (!response.ok) {
+      if (method === "POST") {
+        throw new Error("problems posting on api");
+      } else if (method === "PUT") {
+        throw new Error("problems putting on api");
+      }
+    }
+    const postResp = await response.json();
+    console.log("succesfully posted/put:", postResp);
+    window.location = "index.html";
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+const deleteMovie = async () => {
+  try {
+    const response = await fetch(endpoint, {
+      method: "DELETE",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgwYWYxNWIxZjBmYjAwMTVkOTE4NGUiLCJpYXQiOjE2MjIyMDAwOTUsImV4cCI6MTYyMzQwOTY5NX0.UHVKV5gRpR19xUDZRAVFb5chXxWAkKbfTHVZnAL4Uqg",
+      },
+    });
+    if (!response.ok) {
+      throw new Error("problems deleting the movie");
+    }
+    const deleteResp = await response.json();
+    console.log("succesfully deleted:", deleteResp);
+    window.location = "index.html";
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+deleteBtn.onclick = deleteMovie;
+form.onsubmit = postPutMovies;
