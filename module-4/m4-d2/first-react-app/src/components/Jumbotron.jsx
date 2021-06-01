@@ -2,9 +2,8 @@ import { Container, Jumbotron } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function myJumbotron() {
-    return (
-      
-    <Jumbotron fluid className="mb-0">
+  return (
+    <Jumbotron fluid className="mb-0" style={{ background: "yellow" }}>
       <Container>
         <h1>Welcome to Book Store</h1>
         <p>
@@ -18,4 +17,3 @@ function myJumbotron() {
 }
 
 export default myJumbotron;
-
