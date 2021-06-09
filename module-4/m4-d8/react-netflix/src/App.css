@@ -23,9 +23,6 @@ document.body {
   color: azure;
 }
 
-.supermargin {
-  margin-top: 300px;
-}
 
 .img-fluid:hover {
   opacity: 1;

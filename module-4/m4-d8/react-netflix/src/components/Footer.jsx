@@ -1,9 +1,9 @@
-import { Navbar } from "react-bootstrap"
+import { Navbar } from "react-bootstrap";
 
 const Footer = () => {
   return (
     <Navbar>
-      <div className="container footer d-flex text-white supermargin justify-content-center">
+      <div className="container footer d-flex text-white justify-content-center">
         <div className="row px-3 fontrob">
           <div className="col-6 col-md-3 no-gutter">
             <ul className="list-unstyled">
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
     </Navbar>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
